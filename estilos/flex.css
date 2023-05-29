@@ -37,11 +37,35 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    /* align-content determina o espaço entre as linhas em caso de mais de uma linha. Parecido como o justify-content, mas verticalmente. */
     flex-basis: 100px; /* Funciona como um min-width. */
     /* Usar shorthand 'flex:' para flex-grow, flex-shrink e flex-basis.*/
 }
 
 .box:nth-child(2) {
     order: 4; /* Repare que o elemento 2 foi para o final, isso porque ele pulou 4 posições em vez de ir direto para a 4ª posição. */
+}
+
+footer {
+    margin: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer > a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: #000;
+    color: #fff;
+    padding: 4px;
+    border-radius: 4px;
+    transition: .3s ease-in-out;
+}
+
+footer > a:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 4px;
+    scale: 1.1;
 }
