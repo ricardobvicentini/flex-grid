@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline: auto;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; /* Para que os elementos fiquem contidos dentro do 'parent' e quebrem quando a tela diminuir. */
+    /* align-content: flex-start; >> Faz o conteúdo ficar na posição escolhida, se espremendo nela quando a tela diminuir. */
+}
+
+.box {
+    /* min-width: 100px; */ /* Removido para demonstrar o flex-basis. */
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-basis: 100px; /* Funciona como um min-width. */
+    /* Usar shorthand 'flex:' para flex-grow, flex-shrink e flex-basis.*/
+}
+
+.box:nth-child(2) {
+    order: 4; /* Repare que o elemento 2 foi para o final, isso porque ele pulou 4 posições em vez de ir direto para a 4ª posição. */
+}
